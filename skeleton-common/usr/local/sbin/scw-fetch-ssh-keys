@@ -22,7 +22,7 @@ cat << EOF > /root/.ssh/authorized_keys
 #
 # To add a new key, you can:
 #   -- Add keys on your Scaleway account https://cloud.scaleway.com/#/credentials
-#   -- Add keys using server tags - https://cloud.scaleway.com/#/servers/$(scw-metadata --cached ID)
+#   -- Add keys using server tags - https://cloud.scaleway.com/#/servers/$(/usr/local/bin/scw-metadata --cached ID)
 #        - i.e: "AUTHORIZED_KEY=ssh-rsa_XXXXXXXXXXX AUTHORIZED_KEY=ssh-rsa_YYYYYYYYYYYYYYY"
 #        - Be sure to replace all spaces with underscores
 #        - $> sed 's/ /_/g' ~/.ssh/id_rsa.pub
