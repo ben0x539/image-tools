@@ -4,7 +4,7 @@
 BRANCH=${BRANCH:-master}
 FLAVORS=$(echo ${FLAVORS:-${@:-"common"}} | tr "," " ")
 ROOTDIR=${ROOTDIR:-/}
-DL=${DL:-$(hash curl 2>/dev/null && echo "curl" || echo "wget")}
+DL=${DL:-$(type curl >/dev/null 2>/dev/null && echo "curl" || echo "wget")}
 TMPFILE=/tmp/image-tools-temporary.tar
 
 
